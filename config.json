@@ -1,0 +1,6 @@
+{
+    "spec": ["./spec/**/*.spec.js"],
+    "tslint": ["./src/**/*.ts", "!./src/**/*-model.d.ts", "!./src/**/*-builder.d.ts"],
+    "seleniumAddress": "http://localhost:4444/wd/hub/",
+    "browsers": ["chrome"]
+}

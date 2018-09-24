@@ -1,0 +1,54 @@
+<div class="container">
+  <h2>Template-driven forms</h2>
+  <form #userForm="ngForm" id="templateForm" (ngSubmit)="onSubmit(userForm)">
+
+    <div class="form-group">
+      <label for="time">Time</label>
+      <ejs-timepicker name="time" id="timeDemo" class="form-control" [(ngModel)]="user.time" #time required></ejs-timepicker>
+    </div>
+
+    <div class="form-group">
+      <label for="date">DatePicker</label>
+      <ejs-datepicker name="date" id="dateDemo" class="form-control" [(ngModel)]="user.date" #date required></ejs-datepicker>
+    </div>
+
+    <div class="form-group">
+      <label for="date">DateTimePicker</label>
+      <ejs-datetimepicker name="datetime" id="datetimeDemo" class="form-control" [(ngModel)]="user.datetime" #datetime required></ejs-datetimepicker>
+    </div>
+
+    <div class="form-group">
+      <label for="range">DateRangePicker</label>
+      <ejs-daterangepicker name="range" id="rangeDemo" class="form-control" [(ngModel)]="user.range" #range required></ejs-daterangepicker>
+    </div>
+    <div id='valid'></div>
+    <button type="submit" id="submit" class="btn btn-success">Submit</button>
+    <button type="reset" id="reset" class="btn btn-success">Reset</button>
+  </form>  
+  <div class="btnDiv">
+    <br>
+    <br>
+    <br>
+    <button id="setVal" (click)='btnClick()' class="btn btn-primary">setValue</button>
+    <br>
+    <br>
+    <button id="minVal" (click)='minBtnClick()' class="btn btn-primary">minValue</button>
+    <br>
+    <br>
+    <button id="maxVal" (click)='maxBtnClick()' class="btn btn-primary">maxValue</button>
+    <br>
+    <br>
+    <input id="check" type="checkbox" />
+  </div>
+  <pre class="previewContent">userForm.value: {{userForm.value | json}}</pre>
+  <pre>userForm.valid: {{userForm.valid}}</pre>
+
+</div>
+
+
+
+<style>
+  form {
+    margin-top: 50px;
+  }
+</style>
